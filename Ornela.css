@@ -1,0 +1,86 @@
+/* --- Styles de Base (Communs à toutes les pages) --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Un arrière-plan léger pour le corps */
+}
+
+/* --- 1. Styles du Header de la Page Membre --- */
+.member-header {
+    background-color: #5b9bd5; /* Bleu clair pour le fond de l'entête */
+    color: white; /* Texte blanc */
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    /* Ombre légère pour donner de la profondeur */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.member-header .header-content p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+/* --- 2. Styles du Bouton Menu 1 --- */
+.member-nav {
+    padding: 10px 20px;
+}
+
+.menu-button {
+    /* Couleurs de dégradé pour l'effet 3D gris/argenté */
+    background: linear-gradient(to bottom, #a0a0a0 5%, #808080 100%);
+    background-color: #a0a0a0;
+    color: white;
+    padding: 10px 15px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    /* Ombre pour l'effet de bouton pressé/en relief */
+    box-shadow: 0px 3px 0px 0px #7a7a7a;
+    transition: background 0.3s;
+}
+
+.menu-button:hover {
+    background: linear-gradient(to bottom, #808080 5%, #a0a0a0 100%);
+}
+
+/* --- 3. Styles du Bouton de Retour à la Page Principale --- */
+.return-link-container {
+    /* Positionnement du bouton de retour au centre inférieur (dans la zone principale) */
+    text-align: center;
+    margin-top: 150px; /* Ajustez cette valeur pour positionner le bouton */
+}
+
+.return-button {
+    /* Le style du bouton de retour est similaire au bouton Menu 1 */
+    display: inline-block;
+    text-decoration: none; /* Enlève le soulignement du lien */
+    
+    /* Couleurs de dégradé pour l'effet 3D gris/argenté */
+    background: linear-gradient(to bottom, #a0a0a0 5%, #808080 100%);
+    background-color: #a0a0a0;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0px 3px 0px 0px #7a7a7a;
+    transition: background 0.3s;
+}
+
+.return-button:hover {
+    background: linear-gradient(to bottom, #808080 5%, #a0a0a0 100%);
+}
+
+/* --- 4. Style du Footer (comme demandé dans le projet) --- */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333; /* Fond sombre pour le pied de page */
+    color: white;
+    position: fixed; /* Fixer le footer en bas de la fenêtre */
+    bottom: 0;
+    width: 100%;
+}
