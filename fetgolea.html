@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornela - Groupe 6</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding-top: 80px;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .header {
+            background-color: #fff;
+            color: #333;
+            padding: 1rem 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .navbar {
+            background-color: #fff;
+            padding: 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 70px;
+            left: 0;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu li {
+            margin: 0 10px;
+        }
+
+        .nav-menu a {
+            color: #666;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .nav-menu a:hover {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .nav-menu a.active {
+            background-color: #e0e0e0;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .member-profile {
+            background: #fff;
+            color: #333;
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .member-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .member-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .member-header p {
+            color: #666;
+            font-style: normal;
+            font-size: 1rem;
+        }
+
+        .member-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-section {
+            background: #fafafa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #ccc;
+        }
+        
+        .info-section h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1.2rem;
+        }
+
+        .info-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-section li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        
+        .info-section li:before {
+            content: '•';
+            color: #666;
+            position: absolute;
+            left: 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: #666;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .back-button:hover {
+            background: #555;
+            text-decoration: none;
+        }
+
+        .footer {
+            background-color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #666;
+            margin-top: 3rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 140px;
+            }
+            
+            .navbar {
+                top: 60px;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-menu li {
+                margin: 5px 0;
+            }
+            
+            .member-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .member-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+   <!-- Dans le <title> -->
+<title>Léa - Groupe 6</title>
+
+<!-- Dans l'en-tête du header -->
+<h1>GROUPE 6 - Léa</h1>
+<p>Page personnelle de Léa</p>
+
+<!-- Dans le titre principal de la page -->
+<h2 id="typed-name">Léa</h2>
+
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Nathanael.html">Nathanael</a></li>
+                <li><a href="Ndoumbe Njoh Ornela.html" class="active">Ornela</a></li>
+                <li><a href="fetgolea.html">fetgolea</a></li>
+                <li><a href="MEMBRE4.html">MEMBRE 4</a></li>
+                <li><a href="MEMBRE5.html">MEMBRE 5</a></li>
+                <li><a href="MEMBRE6.html">MEMBRE 6</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <a href="index.html" class="back-button">← Retour à l'accueil</a>
+            
+            <div class="member-profile">
+                <div class="member-header">
+                    <h2>FETGO LEA</h2>
+                    <p>Membre du Groupe 6</p>
+                </div>
+                
+                <div class="member-info">
+                    <div class="info-section">
+                        <h3>Présentation</h3>
+                        <p>Je suis lea, membre du Groupe 6. Mon rôle dans ce projet collaboratif est axé sur l'esthétique et la cohérence du design, en veillant à ce que l'interface soit agréable et intuitive.</p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>Compétences</h3>
+                        <ul>
+                            <li>Design UI/UX de base</li>
+                            <li>HTML & CSS (Styles)</li>
+                            <li>Git & GitHub (Collaboration)</li>
+                            <li>Créativité et attention aux détails</li>
+                            <li>Organisation de l'information</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>Contributions au projet</h3>
+                        <ul>
+                            <li>Définition de la palette de couleurs</li>
+                            <li>Stylisation des cartes de membres</li>
+                            <li>Relecture et assurance qualité</li>
+                            <li>Création du thème de cette page</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>Objectifs d'apprentissage</h3>
+                        <p>Je souhaite renforcer ma compréhension du CSS avancé et des principes de design responsive tout en perfectionnant mon travail en équipe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Groupe 6 - Projet Web Collaboratif. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
