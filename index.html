@@ -4,10 +4,235 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Collaboratif - Groupe 6</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* ======================================= */
+        /* 1. STYLES GÉNÉRAUX ET BODY (Thème sombre) */
+        /* ======================================= */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1c2833; /* Fond très sombre (Dark Blue/Gray) */
+            color: #ecf0f1; /* Couleur du texte par défaut (blanc cassé) */
+            margin: 0;
+            padding-top: 120px; /* Espace pour le header et la navbar fixes */
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Styles pour les liens non spécifiés */
+        a {
+            color: #3498db; /* Bleu */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2ecc71; /* Vert */
+            text-decoration: underline;
+        }
+
+        /* ======================================= */
+        /* 2. HEADER ET FOOTER */
+        /* ======================================= */
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border-bottom: 2px solid #3498db;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #f1c40f; 
+        }
+
+        .footer {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            text-align: center;
+            color: #95a5a6; 
+            margin-top: 3rem;
+            border-top: 1px solid rgba(52, 152, 219, 0.2);
+        }
+
+        /* ======================================= */
+        /* 3. NAVIGATION (Navbar) */
+        /* ======================================= */
+        .navbar {
+            background-color: #34495e;
+            padding: 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 70px; 
+            left: 0;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu li {
+            margin: 0 10px;
+        }
+
+        .nav-menu a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .nav-menu a:hover {
+            background-color: #2ecc71; 
+            color: #1c2833;
+        }
+
+        .nav-menu a.active {
+            background-color: #e74c3c; /* Rouge (Tech color) */
+            color: white;
+            font-weight: bold;
+        }
+
+        /* ======================================= */
+        /* 4. STYLES SPÉCIFIQUES À L'INDEX (Cartes) */
+        /* ======================================= */
+
+        .welcome-section {
+            background: rgba(44, 62, 80, 0.8);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            text-align: center;
+            border: 1px solid rgba(52, 152, 219, 0.4);
+        }
+
+        .welcome-section h2 {
+            color: #f1c40f;
+            font-size: 2.2rem;
+        }
+
+        .team-section h3 {
+            color: #3498db;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .member-card {
+            background: #34495e; /* Gris-bleu foncé */
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-align: center;
+            border-top: 5px solid #e74c3c; /* Accent Rouge */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+        }
+
+        .member-card h4 {
+            color: #2ecc71; /* Accent Vert */
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .member-card .btn {
+            display: inline-block;
+            background: #3498db; /* Bleu */
+            color: white;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .member-card .btn:hover {
+            background: #2980b9;
+            text-decoration: none;
+        }
+
+        .project-info {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #2c3e50;
+            border-radius: 12px;
+        }
+
+        .project-info h3 {
+            color: #f1c40f;
+            border-bottom: 1px dashed #f1c40f;
+            padding-bottom: 0.5rem;
+        }
+
+        .project-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-info li:before {
+            content: '→'; /* Puce personnalisée */
+            color: #e74c3c; /* Rouge */
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* ======================================= */
+        /* 5. RESPONSIVE DESIGN */
+        /* ======================================= */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 170px;
+            }
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar {
+                top: 60px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header avec le nom du groupe -->
     <header class="header">
         <div class="container">
             <h1>GROUPE 6</h1>
@@ -15,14 +240,13 @@
         </div>
     </header>
 
-    <!-- Navigation horizontale -->
     <nav class="navbar">
         <div class="container">
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Accueil</a></li>
                 <li><a href="NATHANAEL.html">NATHANAEL</a></li>
-                <li><a href="Ndoumbe Njoh Ornela.html">Ndoumbe Njoh Ornela
-                <li><a href="MEMBRE3.html">MEMBRE 3</a></li>
+                <li><a href="Ndoumbe Njoh Ornela.html">Ndoumbe Njoh Ornela</a></li>
+                <li><a href="fetgolea.html">FETGO LEA</a></li>
                 <li><a href="MEMBRE4.html">MEMBRE 4</a></li>
                 <li><a href="MEMBRE5.html">MEMBRE 5</a></li>
                 <li><a href="MEMBRE6.html">MEMBRE 6</a></li>
@@ -30,12 +254,11 @@
         </div>
     </nav>
 
-    <!-- Contenu principal -->
     <main class="main-content">
         <div class="container">
             <section class="welcome-section">
                 <h2>Bienvenue sur notre projet collaboratif</h2>
-                <p>Ce site web a été développé collaborativement par tous les membres du Groupe 1 en utilisant Git et GitHub pour la gestion de version.</p>
+                <p>Ce site web a été développé collaborativement par tous les membres du **Groupe 6** en utilisant Git et GitHub pour la gestion de version.</p>
             </section>
 
             <section class="team-section">
@@ -43,18 +266,18 @@
                 <div class="team-grid">
                     <div class="member-card">
                         <h4>NATHANAEL</h4>
-                        <p>Membre du groupe</p>
+                        <p>Contributeur HTML/CSS & Git</p>
                         <a href="NATHANAEL.html" class="btn">Voir la page</a>
                     </div>
                     <div class="member-card">
-                        <h4>ASSAKO</h4>
+                        <h4>Ndoumbe Njoh Ornela</h4>
                         <p>Membre du groupe</p>
-                        <a href="MEMBRE2.html" class="btn">Voir la page</a>
+                        <a href="Ndoumbe Njoh Ornela.html" class="btn">Voir la page</a>
                     </div>
                     <div class="member-card">
-                        <h4>DJOMNANG</h4>
+                        <h4>FETGO LEA</h4>
                         <p>Membre du groupe</p>
-                        <a href="MEMBRE3.html" class="btn">Voir la page</a>
+                        <a href="fetgolea.html" class="btn">Voir la page</a>
                     </div>
                     <div class="member-card">
                         <h4>MEMBRE 4</h4>
@@ -87,7 +310,6 @@
         </div>
     </main>
 
-    <!-- Footer avec copyright -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Groupe 6 - Projet Web Collaboratif. Tous droits réservés.</p>
