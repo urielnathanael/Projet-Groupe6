@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOKMAM – Groupe 6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ----------------- GLOBAL ----------------- */
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #eef2f3 0%, #d9e2ec 100%);
+            color: #2c3e50;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* ----------------- HEADER ----------------- */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            padding: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .header p {
+            opacity: 0.9;
+        }
+
+        /* ----------------- NAVBAR ----------------- */
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        .nav-menu li {
+            margin: 0 1rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            padding: 1rem;
+            display: block;
+            font-weight: 500;
+            color: #34495e;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu .active {
+            color: #4ca1af;
+        }
+
+        /* ----------------- MAIN PROFILE ----------------- */
+        .member-profile {
+            margin: 3rem 0;
+            padding: 3rem;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.65);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .member-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .member-header h2 {
+            font-size: 2.4rem;
+            color: #2c3e50;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: #4ca1af;
+            color: white;
+            padding: 0.9rem 1.8rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #2c3e50;
+        }
+
+        /* ----------------- GRID INFO ----------------- */
+        .member-info {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .info-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .info-section:hover {
+            transform: scale(1.02);
+        }
+
+        .info-section h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #4ca1af;
+            margin-bottom: 1rem;
+        }
+
+        .info-section ul {
+            padding-left: 1rem;
+        }
+
+        /* ----------------- FOOTER ----------------- */
+        .footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <h1>GROUPE 6 – BOKMAM</h1>
+            <p>Page personnelle professionnelle</p>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="BOKMAM.html" class="active">BOKMAM</a></li>
+                <li><a href="Nathanael.html">Nathanael</a></li>
+                <li><a href="Ndoumbe Njoh Ornela.html">Ndoumbe Njoh Ornela</a></li>
+                <li><a href="fetgolea.html">fetgolea</a></li>
+                <li><a href="MEMBRE4.html">MEMBRE 4</a></li>
+                <li><a href="Bokman.html">BOKMAM</a></li>
+                <li><a href="MEMBRE6.html">MEMBRE 6</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="container">
+
+            <a href="index.html" class="back-button">← Retour à l'accueil</a>
+
+            <div class="member-profile">
+
+                <div class="member-header">
+                    <h2>BOKMAM</h2>
+                    <p>Membre du Groupe 6 — Développeur Frontend</p>
+                </div>
+
+                <div class="member-info">
+
+                    <div class="info-section">
+                        <h3>Présentation</h3>
+                        <p>Je suis BOKMAM, membre actif du Groupe 6. Je contribue au développement du projet web en apportant mon sens de l’organisation, mes compétences techniques et ma vision moderne du design frontend.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Compétences</h3>
+                        <ul>
+                            <li>HTML5 / CSS3 Moderne</li>
+                            <li>Responsive Web Design</li>
+                            <li>JavaScript (bases)</li>
+                            <li>Git & GitHub</li>
+                            <li>Déploiement cPanel</li>
+                            <li>Design UI / UX</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Contributions au projet</h3>
+                        <ul>
+                            <li>Création d’une page personnelle professionnelle</li>
+                            <li>Amélioration du design général du site</li>
+                            <li>Structure HTML moderne</li>
+                            <li>Optimisation responsive</li>
+                            <li>Participation à l’organisation du contenu des membres</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Objectifs d'apprentissage</h3>
+                        <p>Je souhaite renforcer mes compétences en développeme
